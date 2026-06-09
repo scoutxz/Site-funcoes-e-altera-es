@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução a Funções JS</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+            background-color: #f4f4f4;
+            transition: background 0.5s;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            margin: 5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>1 - Função JavaScript</h1>
+
+    <p>
+        Clique nos botões abaixo para testar as funções.
+    </p>
+
+    <button onclick="mudarCor()">Mudar cor de fundo</button>
+    <button onclick="mudarTexto()">Mudar título</button>
+    <button onclick="alternarVisibilidade()">Esconder/Mostrar</button>
+    <button onclick="modoEscuro()">Alternar modo</button>
+
+    <script>
+        function mudarCor() {
+            document.body.style.backgroundColor = "#ffcc00";
+            alert("A função JavaScript foi executada com sucesso!");
+        }
+
+        function mudarTexto() {
+            document.querySelector("h1").innerText =
+                "O JavaScript é incrível!";
+        }
+
+        function alternarVisibilidade() {
+            let paragrafo = document.querySelector("p");
+
+            if (paragrafo.style.display === "none") {
+                paragrafo.style.display = "block";
+            } else {
+                paragrafo.style.display = "none";
+            }
+        }
+
+        function modoEscuro() {
+            if (document.body.style.backgroundColor === "rgb(51, 51, 51)") {
+                document.body.style.backgroundColor = "#f4f4f4";
+                document.body.style.color = "#000000";
+            } else {
+                document.body.style.backgroundColor = "#333333";
+                document.body.style.color = "#ffffff";
+            }
+        }
+    </script>
+</body>
+</html>
